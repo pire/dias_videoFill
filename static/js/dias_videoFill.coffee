@@ -53,14 +53,18 @@
             $win.resize()
         cacheAspect : ($video) ->
             # cache aspect ratio for video
-            $this = $video
-            width = $this.width()
-            height = $this.height()
+            $video.css(
+                width: '100%'
+                height: 'auto'
+            )
 
-            $this.data('ratio', width/height)
+            width = $video.width()
+            height = $video.height()
+
+            $video.data('ratio', width/height)
 
             # make sure video is resized correctly
-            this.videoResize($this)
+            this.videoResize($video)
         videoResize : ($video) ->
             # resize video to fill parent container
             aspectRatio = $video.data('ratio')
