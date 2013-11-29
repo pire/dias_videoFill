@@ -67,7 +67,7 @@
             pWidth = $parent.width()
 
             if not aspectRatio?
-                aspectRatio = $this.width() / $video.height()
+                aspectRatio = $video.width() / $video.height()
 
             parentRatio = pWidth/pHeight
 
