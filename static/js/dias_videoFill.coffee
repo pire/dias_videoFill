@@ -49,6 +49,8 @@
             $win.bind('resize', ->
                 _this.videosResize()
             )
+
+            $win.resize()
         cacheAspect : ($video) ->
             # cache aspect ratio for video
             $this = $video
