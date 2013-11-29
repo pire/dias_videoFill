@@ -13,11 +13,18 @@
         # padding around the video
         padding: 0
         init : ->
-            this.cacheItems()
+            items = this.cacheItems()
+
+            if not items
+                return false
+
             this.bindEvents()
         cacheItems : ->
             # cache the video items
-            this.$videos  = $('.video-container video')
+            this.$videos  = $('.dias-video-filler video, .dias-video-filler iframe')
+
+            if( this.$videos.length < 1 )
+                return false
 
             # cache the container of the video
             this.$videos.each( ->
@@ -28,10 +35,9 @@
             # make sure videos are centered
             this.$videos.css(
                 left: '50%'
-                height: 'auto'
                 top: '50%'
-                width: '100%'
             )
+
         bindEvents : ->
             # bind event listeners
             _this = this
@@ -78,6 +84,8 @@
                 marginTop : (-vidHeight/2)
                 marginLeft : (-vidWidth/2)
             )
+
+            return $video
         videosResize : ->
             _this = this
             # on window resize cycle through each video

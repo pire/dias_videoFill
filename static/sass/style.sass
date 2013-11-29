@@ -7,12 +7,61 @@ $c-primary: #000
 $c-secondary: grayscale(#94AA1F)
 $c-tertiary: grayscale(#525f11)
 
+.clearfix
+  &:after
+    clear: both
+    content: "."
+    display: block
+    line-height : 0
+    height: 0
+    visibility: hidden
+
+  html[xmlns] &
+    display: block
+
+  * html &
+    height: 1%
+
 html, body
   height: 100%
 
-#container
-  background: rgba($c-primary, 0.8)
-  min-height: 80%
-  margin: 0 auto
-  min-width: 320px
-  width: 80%
+body
+  background: #efefef
+  color: #666
+  font: 14px/1.2em Helvetica, Arial, sans-serif
+
+h1
+  color: #888
+  font-size: 22px
+  font-weight: normal
+
+h1 a
+  color: #4b94fe
+  font-size: 12px
+  text-decoration: none
+
+h1 a:hover
+  text-decoration: underline
+
+a:visited
+  color: #369
+
+h2
+  color: #999
+  font-size: 16px
+  font-weight: normal
+  margin: 30px 0 10px
+
+#container,
+.content
+  background: #fff
+  border: solid 1px #ccc
+  margin: 0 auto 20px
+  padding: 20px 20px 30px
+  max-width: 960px
+
+#main-description
+  margin-top: 100px
+
+.video-container
+  border: solid 2px #369

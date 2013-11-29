@@ -1,20 +1,63 @@
-<html>
+<html lang="en" dir="ltr">
 <head>
+  <meta charset="utf-8">
 
-<link href="./static/css/style.css" rel="stylesheet">
-<link href="./static/css/dias_videoFill.css" rel="stylesheet">
+  <link href="./static/css/style.css" rel="stylesheet">
+  <link href="./static/css/dias_videoFill.css" rel="stylesheet">
 </head>
 <body>
 
-  <div class="video-container">
-     <video loop="loop" autoplay="autoplay" data-articlecontentdelay="3"><source src="//pire.largeblue.net/msf/static/video/ryan.mp4" type="video/mp4"></video>
+  <div id="main-description" class="content">
+    <h1>DIAS video container filler <a href="#">Github repo</a></h1>
+    <p>A simple JS snippet to make a &lt;video&gt; fill it's container. Works with responsive implementations too.</p>
+
+    <h2>Dependencies</h2>
+    <ul>
+      <li>jQuery</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <ol>
+      <li>load the dias_videoFill.js and dias_videoFill.css into your site</li>
+      <li>insert each &lt;video&gt; in a container .dias-video-filler</li>
+    </ol>
+
+    <h2>Browser compatibility</h2>
+    <ul>
+      <li>Chrome</li>
+      <li>Firefox</li>
+      <li>Safari</li>
+      <li>Opera</li>
+      <li>IE 9+</li>
+    </ul>
   </div>
 
-  <div class="video-container" style="display: inline-block; width: 50%; margin: 20px auto; vertical-align: top">
-     <video loop="loop" autoplay="autoplay" data-articlecontentdelay="3"><source src="//pire.largeblue.net/msf/static/video/ryan.mp4" type="video/mp4"></video>
+  <div class="content clearfix">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="dias-video-filler video-container" style="height: 75%;">
+          <iframe width="560" height="315" frameborder="0" allowfullscreen
+            src="//www.youtube.com/embed/y0sl4fIxm4E?autoplay=1&controls=0&modestbranding=1&showinfo=0&iv_load_policy=3&rel=0&loop=1"></iframe>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="dias-video-filler video-container" style="height: 50%;">
+          <video loop="loop" autoplay="autoplay" data-articlecontentdelay="3"><source src="//pire.largeblue.net/msf/static/video/ryan.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div class="dias-video-filler video-container" style="height: 24%;">
+           <iframe src="//player.vimeo.com/video/17629367?api=1&amp;player_id=video&amp;title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1&amp;hd_off=1&color=000"
+            width="500" height="375" frameborder="0"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="video-container" style="display: inline-block; height: 10%; width: 20%; margin: 20px 0 0; vertical-align: top">
+  <div class="dias-video-filler video-container">
      <video loop="loop" autoplay="autoplay" data-articlecontentdelay="3"><source src="//pire.largeblue.net/msf/static/video/ryan.mp4" type="video/mp4"></video>
   </div>
 
